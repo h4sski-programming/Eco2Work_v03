@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'e2w_app',
+    'e2w_app.apps.E2WAppConfig',
     ]
 
 MIDDLEWARE = [

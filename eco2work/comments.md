@@ -1,0 +1,62 @@
+# Project Eco2Work
+
+Web application made to register distance done on eco-friendly
+way when traveling from home to office and back to home.
+
+General purpose is to implement it in Creadis company.
+
+Goal at some page is to have activities visible in calendar-look table.
+
+## DB models
+
+### `Activity`
+
+Have implemented `__str__` function, which return `{distance} {vehicle} {date}`.
+
+| Variable | Type | Description                      |
+| --- |------|----------------------------------|
+| id | int  | id                               |
+| distance | int  | Distance of the activity in [km] |
+| vehicle | char | Name / type of the transport vehicle. Going to make it selectable and have only pre-defined options. |
+| date | date | Date of the activity |
+| time_create | datetime | Time of creation particular activity. Generated automatically. |
+| time_update | datetime | Time of the last update the activity. Generated automatically. |
+
+---
+
+# Useful stuff
+
+Some useful links and hints used during development of this
+application.
+
+## Links
+
+| Description | Link                                                        |
+| ----------- |-------------------------------------------------------------| 
+| Django | https://docs.djangoproject.com/en/4.1/intro/tutorial02/     |
+| About MD files | https://www.markdownguide.org/basic-syntax/#paragraphs-1    |
+| More about MD files | https://www.markdownguide.org/extended-syntax/#availability |
+
+## Terminal commands
+
+Some commands used to create 'eco2work' and 'e2w_app'
+
+### Commands during first setup / steps of development
+
+    python manage.py makemigrations e2w_app
+    python manage.py sqlmigrate e2w_app 0001
+    python manage.py migrate
+
+When making changes in `models.py` have to do some commands:
+
+- Change your models (in `models.py`).
+- Run `python manage.py makemigrations` to create migrations for those changes
+- Run `python manage.py migrate` to apply those changes to the database.
+
+### Creating superuser
+
+    python manage.py createsuperuser
+
+login: `h4sski`  
+password: `H$sskih4sski`
+
